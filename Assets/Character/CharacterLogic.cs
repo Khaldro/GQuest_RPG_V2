@@ -1,13 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CharacterLogic : MonoBehaviour
 {
-    
+    CharacterData Warrior = new CharacterData();
+
     void Start()
     {
-        CharacterData.ccNAME = "Khaldro";
-        Debug.Log(CharacterData.ccNAME);
+        Warrior.ccNAME = "Khaldro";
+        Warrior.ccLVL = 99;
+        //Debug.Log(CharacterData.ccNAME
+
+        Characters.CHARACTER_LIST.Add(1, Warrior);
     }
 }
