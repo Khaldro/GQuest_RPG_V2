@@ -23,11 +23,7 @@ public class Generator : MonoBehaviour
         GenerateZoneButton("First Zone", 10, 2, null);
         GenerateZoneButton("Third zone", 20, 3, null);
         GenerateZoneButton("ShitassButton", 30, 4, null);
-        GenerateZoneButton("ShitassButton", 30, 5, null);
-        GenerateZoneButton("ShitassButton", 30, 6, null);
-        GenerateZoneButton("ShitassButton", 30, 7, null);
-        GenerateZoneButton("ShitassButton", 30, 8, null);
-        GenerateZoneButton("ShitassButton", 30, 9, null);
+        
     }
 
     void GenerateZoneButton(string name, short lvl, short zoneID, string imagePath)
