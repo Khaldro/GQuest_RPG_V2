@@ -10,6 +10,6 @@ public class CharacterLogic : MonoBehaviour
         Warrior.ccLVL = 99;
         //Debug.Log(CharacterData.ccNAME
 
-        Characters.CHARACTER_LIST.Add(1, Warrior);
+        Characters.CHARACTER_DICT.Add(1, Warrior);
     }
 }
