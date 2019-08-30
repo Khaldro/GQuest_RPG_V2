@@ -2,14 +2,17 @@
 
 public class CharacterLogic : MonoBehaviour
 {
-    CharacterData Warrior = new CharacterData();
+    __CharacterData Warrior = new __CharacterData();
 
     void Start()
     {
         Warrior.ccNAME = "Khaldro";
         Warrior.ccLVL = 99;
+        Warrior.ccATTACK = 10;
+        Warrior.AttackSpeed = 10;
+        Warrior.HP = 100;
         //Debug.Log(CharacterData.ccNAME
 
-        Characters.CHARACTER_DICT.Add(1, Warrior);
+        __Characters.CHARACTER_DICT.Add(1, Warrior);
     }
 }

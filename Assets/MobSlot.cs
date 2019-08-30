@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +22,14 @@ public class MobSlot : MonoBehaviour
         tempStruct = __MobsDict.MOBS_DICT[zoneID];
         data = tempStruct.Mobs[mobID];
         this.GetComponent<Button>().GetComponentInChildren<Text>().text = data.mmName;
-        
+
+        gameObject.GetComponent<Button>().onClick.AddListener(StartFight);
+    }
+
+    private void StartFight()
+    {
+        __FightScene.opponent = data;
+        __FightScene.player = __Characters.CHARACTER_DICT[1];
+        UnityEngine.SceneManagement.SceneManager.LoadScene("FightScene", UnityEngine.SceneManagement.LoadSceneMode.Additive);
     }
 }

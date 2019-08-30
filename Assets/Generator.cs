@@ -42,9 +42,11 @@ public class Generator : MonoBehaviour
             {
                 __MobData mobData = new __MobData
                 {
-                    ID          = counter,
-                    LVL         = counter,
-                    mmName      = "mob" + counter,
+                    ID = counter,
+                    LVL = counter,
+                    mmName = "mob" + counter,
+                    HP = 100f,
+                    AttackSpeed = Math.Pow(5f, 1.2f),
                     ATTACK      = 2 * counter,
                     DEFENSE     = 3 * counter,
                     image       = null
@@ -95,8 +97,6 @@ public class Generator : MonoBehaviour
         Transform tempTransform = zone.transform.GetChild(0).GetChild(1);
         for (short i = 0; i <= 8; i++)
         {
-            //Debug.LogWarning("Generator.cs => zoneID: " + zoneID + " mobID " + MobID);
-
             tempTransform.GetChild(i).GetComponent<MobSlot>().zoneID = zoneID;
             tempTransform.GetChild(i).GetComponent<MobSlot>().mobID = MobID;
             ++MobID;

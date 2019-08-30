@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[Serializable]
-public struct CharacterData
+public struct __CharacterData
 {
     public string ccNAME;
     public short ccLVL;
     public short ccSTR;
     public short ccVIT;
     public short ccDEX;
+
+    public float HP;
+    public float AttackSpeed;
     public int ccATTACK;
     public int ccDEFENSE;
 }
-public struct Characters
+
+public struct __Characters
 {
-    public static Dictionary<int, CharacterData> CHARACTER_DICT = new Dictionary<int, CharacterData>();
+    public static Dictionary<int, __CharacterData> CHARACTER_DICT = new Dictionary<int, __CharacterData>();
 }
 
 public struct __WeaponData
@@ -66,6 +69,8 @@ public struct __MobData
     public short LVL;
     public string mmName;
     public UnityEngine.UI.Image image;
+    public float HP;
+    public double AttackSpeed;
     public int ATTACK;
     public int DEFENSE;
 }
@@ -79,4 +84,11 @@ public struct __MobsDataStruct
 public struct __MobsDict
 {
     public static Dictionary<int, __MobsDataStruct> MOBS_DICT = new Dictionary<int, __MobsDataStruct>();
+}
+
+public struct __FightScene
+{
+    public static __MobData opponent;
+    public static __CharacterData player;
+    public static UnityEngine.UI.Image background;
 }
